@@ -39,10 +39,11 @@ def show_task(id):
     task = task_repository.select(id)
     return render_template('tasks/show.html', task = task)
 
+
 @tasks_blueprint.route("/tasks/<id>/edit", methods=['GET'])
 def edit_task(id):
     task = task_repository.select(id)
-    users= user_repository.select_all()
+    users = user_repository.select_all()
     return render_template('tasks/edit.html', task = task, all_users = users)
 
 @tasks_blueprint.route("/tasks/<id>", methods=['POST'])

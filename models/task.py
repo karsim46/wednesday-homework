@@ -1,6 +1,6 @@
 class Task:
 
-    def __init__(self, description, user, duration, completed = False,  id = None, ):
+    def __init__(self, description, user, duration, completed = False,  id = None):
         self.description = description
         self.user = user
         self.duration = duration
